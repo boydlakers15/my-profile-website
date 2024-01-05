@@ -1,5 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import img2 from "./components/IMG/profile.png";
+import img3 from "./components/IMG/pexels.jpg";
+import Navbar from './components/Navbar.js';
+import {
+  MDBCol,
+  MDBContainer,
+  MDBRow,
+  MDBCard,
+  MDBCardText,
+  MDBCardBody,
+  MDBCardImage,
+  MDBBtn,
+  MDBBreadcrumb,
+  MDBBreadcrumbItem,
+  MDBProgress,
+  MDBProgressBar,
+  MDBIcon,
+  MDBCarousel,
+  MDBCarouselItem,
+  MDBCarouselCaption,
+  MDBFooter
+} from 'mdb-react-ui-kit';
+// Import Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Import Bootstrap JS
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
   return (

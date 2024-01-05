@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+/* SkillsPage.css */
+
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Container styles */
+.my-5 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Card styles */
+.card {
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+}
+
+.card-body {
+  padding: 1.25rem;
+  
+}
+
+/* Heading styles */
+h1, h2 {
+  color: #007bff;
+}
+
+/* Skill section styles */
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+/* Progress bar styles */
+.progress {
+  border-radius: 0.25rem;
+}
+
+@keyframes confetti {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  25% {
+    transform: translateY(-20vh) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(0) rotate(0);
+  }
+
+  75% {
+    transform: translateY(-20vh) rotate(-45deg);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.confetti-piece {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #ffcc00; /* Confetti color */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: confetti 1s ease-out;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive styles for tablets and smartphones */
+@media (max-width: 768px) {
+  /* Adjust the margin for smaller screens */
+  .my-5 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  /* Adjust padding for smaller screens */
+  .card-body {
+    padding: 1rem;
   }
 }

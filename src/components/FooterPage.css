@@ -1,0 +1,33 @@
+/* Add smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    color: white;
+    
+  }
+
+  .img-fluid1{
+    box-shadow: -4px 5px 5px rgb(255, 255, 255);
+  }
+
+
+  
+  /* Add this to your existing styles or create a new stylesheet */
+  .square-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  
+  .centered-content-container {
+    position: inherit;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  

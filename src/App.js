@@ -1,51 +1,25 @@
-import React, { useState } from 'react';
-import img2 from "./components/IMG/profile.png";
-import img3 from "./components/IMG/pexels.jpg";
-import Navbar from './components/Navbar.js';
-import {
-  MDBCol,
-  MDBContainer,
-  MDBRow,
-  MDBCard,
-  MDBCardText,
-  MDBCardBody,
-  MDBCardImage,
-  MDBBtn,
-  MDBBreadcrumb,
-  MDBBreadcrumbItem,
-  MDBProgress,
-  MDBProgressBar,
-  MDBIcon,
-  MDBCarousel,
-  MDBCarouselItem,
-  MDBCarouselCaption,
-  MDBFooter
-} from 'mdb-react-ui-kit';
-// Import Bootstrap CSS
-import 'bootstrap/dist/css/bootstrap.min.css';
+// App.js
 
-// Import Bootstrap JS
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LandingPage from './components/LandingPage';
+import Profile from './components/Profile';
+import SkillsPage from './components/Skills';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          {/* Use the "element" prop instead of "component" */}
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/Profile" element={<Profile />} />
+          <Route path="/Skills" element={<SkillsPage />} />
+        </Routes>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;

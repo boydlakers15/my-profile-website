@@ -1,0 +1,536 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+root{
+  background-color: #333333;
+
+}
+
+.main{
+  box-shadow: -4px 5px 5px rgb(255, 255, 255);
+}
+
+.main2{
+  box-shadow: -4px 5px 5px rgb(0, 0, 0);
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  
+}
+
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+  .button {
+    border: 2px solid black;
+   
+  }
+
+
+
+.link{
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #3B5998; /* Initial color for the link */
+ 
+}
+
+.image-card{
+  height: 600px;
+  
+}
+
+.link:hover{
+  background-color: transparent;
+  text-decoration: none;
+  color: transparent;
+
+}
+
+
+a:hover{
+  color: white;
+}
+
+
+
+/* Styling when the link is hovered */
+.facebook-link:hover {
+  color: transparent; /* Make the text transparent on hover */
+}
+
+/* Show the logo when the link is hovered */
+.facebook-link:hover .facebook-logo {
+  opacity: 1;
+  color: transparent;
+  width: 20px; /* Adjust the size of the logo */
+  height: 20px; /* Optional: Set the color to transparent when the logo is visible */
+  transition: opacity 1s ease-in-out;
+  
+}
+
+
+.facebook-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: transparent; /* Initial color for the link */
+ 
+}
+
+.fa-lg1:hover{
+  transform: scale(1.2);
+  
+}
+.fa-lg2:hover{
+  transform: scale(1.2);
+  
+}
+.fa-lg1.card1left:hover:after {
+    content: 'Click Me';
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 20px); /* Adjust the distance from the icon */
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 16px; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevent the text from wrapping to the next line */
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    font-family: normal;
+    box-shadow:  2px 4px 5px black;
+  }
+  
+  
+  /* Sidebar Styles */
+  .bg-light {
+    background-color: #f8f9fa;
+  }
+  
+  .sidebar {
+    padding: 1rem;
+    
+  }
+
+  .sidebar-open {
+    border: 5px;
+    border-color: #333;
+    box-shadow:  2px 4px 5px black;
+    background-color: rgba(144, 238, 144, 0.2);
+  }
+  .bg-light{
+    transform: translateY(-2px);
+    box-shadow:  2px 4px 5px black;
+    background-color: rgba(94, 234, 94, 0.2);
+  }
+
+  .raised1 {
+    /* Add styles for the raised effect, for example: */
+    transform: translateY(-2px);
+    box-shadow:  2px 4px 5px rgb(255, 255, 255);
+    background-color: rgba(64, 197, 209, 0.2);
+    /* Add any other styles you want to apply when the element is raised */
+  }
+
+  
+  .raised {
+    /* Add styles for the raised button, for example: */
+    transform: translateY(0px);
+    box-shadow:  2px 4px 5px rgb(255, 255, 255);
+    background-image: url(./IMG/pexels.jpg);
+    background-position: center;
+    background-repeat: no-repeat;  
+    background-size: cover;
+    
+   
+  }
+  
+  .main-content {
+    margin-left: 1rem; /* Adjust the left margin for better responsiveness */
+    margin-right: 1rem; /* Adjust the right margin for better responsiveness */
+  }
+  
+  /* Card Styles */
+  .card {
+    margin-bottom: 1rem;
+    box-shadow:  2px 4px 5px rgb(255, 255, 255);
+   
+  }
+  
+  /* Card Body Styles */
+  .card-body {
+    text-align: center;
+    
+  }
+
+  /* Add these styles to your CSS file */
+
+.card-with-fade-left {
+  transform: perspective(1000px) rotateY(10deg) translateZ(50px);
+  background: rgba(255, 255, 255, 0.9); /* Adjust alpha value for transparency */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle fade */
+  
+
+}
+
+.card-with-fade {
+  transform: perspective(1000px) rotateY(-10deg) translateZ(50px);
+  background: rgba(255, 255, 255, 0.9); /* Adjust alpha value for transparency */
+  box-shadow:  2px 4px 5px black;
+  top: 40px;
+  left: 60px;
+  
+}
+
+/* Add these styles to your CSS file */
+
+.card-with-fade-right {
+  position: relative;
+  overflow: hidden;
+  transition: transform 2s ease-out, background-color 0.3s ease-out;
+  top: 40px;
+  box-shadow:  2px 4px 5px black;
+}
+
+.card-with-fade-right:hover {
+  transform: translateX(20px);
+   transition: transform 2s ease-out
+}
+
+.card-with-fade-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9); /* Adjust alpha value for transparency */
+  z-index: -1;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.card-with-fade-right:hover::before {
+  transform-origin: left;
+  transform: scaleX(45%);
+  
+}
+
+.card-with-fade-right.card1:hover {
+  background-color: #3C5A96; /* Change to your desired hover background color for card1 */
+  width: 420px;
+}
+
+.card-with-fade-right.card2:hover {
+  background-color: #333333; /* Change to your desired hover background color for card2 */
+}
+
+.card-with-fade-right.card3:hover {
+  background-color: #59ADEC; /* Change to your desired hover background color for card3 */
+}
+
+.card-with-fade-right.card4:hover {
+  background-color: #B336AA; /* Change to your desired hover background color for card3 */
+}
+
+.card-with-fade .card-image {
+  margin-bottom: 15px; /* Add margin-bottom for space between image and text */
+}
+
+.fa-lg:hover{
+  transform: scale(1.8);
+  
+}
+
+.fa-lgF:hover{
+  transform: scale(1.2);
+  
+}
+
+.fa-lg.card1::after {
+  content: 'Click Me';
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 10px); /* Adjust the distance from the icon */
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #3b5998;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px; /* Adjust the font size as needed */
+  white-space: nowrap; /* Prevent the text from wrapping to the next line */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  box-shadow:  2px 4px 5px black;
+}
+
+.fa-lgF.card1left::after {
+  content: 'Click Me';
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 10px); /* Adjust the distance from the icon */
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #3b5998;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px; /* Adjust the font size as needed */
+  white-space: nowrap; /* Prevent the text from wrapping to the next line */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  box-shadow:  2px 4px 5px black;
+}
+
+.fa-lg.card2::after {
+  content: 'Click Me';
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 10px); /* Adjust the distance from the icon */
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #333333;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px; /* Adjust the font size as needed */
+  white-space: nowrap; /* Prevent the text from wrapping to the next line */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  box-shadow:  2px 4px 5px black;
+}
+
+.fa-lg.card3::after {
+  content: 'Click Me';
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 10px); /* Adjust the distance from the icon */
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #55aecc;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px; /* Adjust the font size as needed */
+  white-space: nowrap; /* Prevent the text from wrapping to the next line */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  box-shadow:  2px 4px 5px black;
+}
+
+
+.fa-lg.card4::after {
+  content: 'Click Me';
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 10px); /* Adjust the distance from the icon */
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #ac2bac;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px; /* Adjust the font size as needed */
+  white-space: nowrap; /* Prevent the text from wrapping to the next line */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  box-shadow:  2px 4px 5px black;
+}
+
+
+.fa-lg:hover::after {
+  opacity: 1;
+}
+
+
+
+.profile-container {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-image: url('https://w.forfun.com/fetch/9f/9f2d0e3840ab815c6807d791aa58eb68.jpeg');
+  background-position: center;
+    background-repeat: no-repeat;  
+    background-size: cover;
+  
+}
+
+.profile-container.visible {
+  opacity: 1;
+}
+
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+}
+
+nav ul li {
+  margin-right: 1rem;
+  
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  box-shadow:  2px 4px 5px black;
+}
+
+/* Add the following styles to highlight the active menu item */
+nav a.active {
+  border-bottom: 2px solid white;
+  
+}
+
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  
+  bottom: 0;
+  width: 100%;
+}
+
+/* Add this to your existing styles or create a new stylesheet */
+.square-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  
+}
+
+.centered-content-container {
+  position: inherit;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+/* Add this to your CSS file */
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffcc00; /* Confetti color */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: confetti-fall 6s ease-out;
+  transform-origin: 50% 50%;
+}
+
+@keyframes confetti-fall {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  25% {
+    transform: translateY(-20vh) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(0) rotate(0);
+  }
+
+  75% {
+    transform: translateY(-20vh) rotate(-45deg);
+  }
+}
+
+  /* Responsive Styles */
+  @media (max-width: 767px) {
+    /* Styles for small screens (e.g., smartphones) */
+    .sidebar {
+      display: none; /* Hide the sidebar on small screens */
+    }
+  
+    .main-content {
+      margin-left: 0;
+      margin-right: 0; /* Remove margins on small screens for better fit */
+    }
+  
+    .centered-content-container {
+      height: auto; /* Allow the content to take up the available height */
+    }
+  
+    .card-body {
+      padding: 1rem; /* Add some padding to the card body for better readability */
+    }
+  }
+  /* Responsive styles for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .square-image {
+      height: 300px; /* Adjust the height for tablets */
+    }
+  
+    .centered-content-container {
+      padding: 20px; /* Add some padding for tablets */
+    }
+  
+    .rounded-circle {
+      width: 100px; /* Adjust the width for tablets */
+    }
+  
+    .card-body {
+      padding: 20px; /* Add some padding for tablets */
+    }
+  }
+  
+  /* Responsive styles for phones */
+  @media (max-width: 767px) {
+    .square-image {
+      height: 200px; /* Adjust the height for phones */
+    }
+  
+    .centered-content-container {
+      padding: 10px; /* Add some padding for phones */
+    }
+  
+    .rounded-circle {
+      width: 80px; /* Adjust the width for phones */
+    }
+  
+    .card-body {
+      padding: 10px; /* Add some padding for phones */
+    }
+  }
+  

@@ -1,5 +1,6 @@
 {
   "name": "my-profile-website",
+  "homepage": "https://boydlakers15.github.io/",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://boydlakers15.github.io/my-profile-website",
@@ -22,6 +23,7 @@
     "chokidar": "^3.5.3",
     "drei": "^1.0.0",
     "gh": "^1.13.9",
+    "gh-pages": "^6.1.1",
     "jotai": "^2.6.0",
     "login": "^0.8.0",
     "mdb-react-ui-kit": "^7.0.0",
@@ -46,6 +48,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "npm run dev"

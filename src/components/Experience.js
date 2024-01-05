@@ -65,8 +65,8 @@ import {
     return (
       <>
         <CameraControls ref={controls} />
-        <mesh ref={meshFitCameraHome} position={[3.1, 1, .3]} visible={false}>
-          <boxGeometry args={[12.5, 2, 2]} />
+        <mesh ref={meshFitCameraHome} position={[3.5, 1.5, .3]} visible={false}>
+          <boxGeometry args={[12, 3, 3]} />
           <meshBasicMaterial color="orange" transparent opacity={0.9} />
         </mesh>
         <Text
